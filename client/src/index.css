@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.landing {
+  padding: 15px;
+  color: #fff;
+  background: url("https://www.gratistodo.com/wp-content/uploads/2016/09/Pokemon-1.png") no-repeat center center/cover;
+  height: 700px;
+  
+
+}
