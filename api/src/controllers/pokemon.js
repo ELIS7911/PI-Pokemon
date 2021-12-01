@@ -38,7 +38,7 @@ const createPokemon = async (
 	speed,
 	height,
 	weight,
-	types
+	types,
 ) => {
 	if (name) {
 		let poke = await Pokemon.create({

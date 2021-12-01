@@ -1,12 +1,17 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getPokemons, filterPokeType } from "../actions";
 import { Link } from "react-router-dom";
+//importo los hooks que voy a usar de react
+import { useState, useEffect } from "react";
+//importo los hooks de react-redux
+import { useDispatch, useSelector } from "react-redux";
+//importo las actions que voy a usar en este componente
+import { getPokemons, filterPokeType, filterCreated, orderByName } from "../actions";
+//importo los componentes que voy a usar
 import Card from "./Card";
 import Paginate from './Paginate';
-/* import SearchBar from './SearchBar'; */
+import SearchBar from './SearchBar';
 
+//componente
 export default function Home() {
   const dispatch = useDispatch();
   const allPokemons = useSelector((state) => state.pokemons);
@@ -39,17 +44,17 @@ export default function Home() {
         setCurrentPage(1);
     }
 
-  /* function handleFilterCreated(e){
+    function handleFilterCreated(e){
         dispatch (filterCreated(e.target.value))
         setCurrentPage(1);
-    } */
+    } 
 
-  /* function handleSort(e){
+  function handleSort(e){
         e.preventDefault();
         dispatch (orderByName(e.target.value))
         setCurrentPage(1);
         setOrder(`Ordenado ${e.target.value}`)
-    } */
+    }
 
   return (
     <div>
@@ -86,12 +91,15 @@ export default function Home() {
                     <option value="shadow">Shadow</option>
                     <option value="unknown">Unknown</option>
         </select>
-        <select>
-          <option value="All">Todos</option>
-          <option value="Api">Existente</option>
-          <option value="Created">Creado</option>
+        <select onChange={e => handleFilterCreated(e)}>
+        <option disabled selected>
+						Creado/Existente
+					</option>
+					<option value='all'>All</option>
+					<option value='number'>Exist</option>
+					<option value='string'>Created</option>
         </select>
-        <select>
+        <select onChange={e => handleSort(e)}>
           <option value="Asc">Ascendente</option>
           <option value="Desc">Descendente</option>
         </select>
@@ -100,11 +108,11 @@ export default function Home() {
                 allPokemons={allPokemons.length}
                 paginate={paginate}
                 />
-                {/* <SearchBar/> */}
+                <SearchBar/>
         {currentPokemons?.map((el) => {
           return (
             <fragment>
-              <Link to={"/home/" + el.id}>
+              <Link to={"/pokemons/" + el.id}>
                 <Card
                   name={el.name}
                   types={el.types}
