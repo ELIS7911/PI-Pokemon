@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 
 export default function LandingPage(){
     return (
-        <div className="landing">
-            <h1>Pokemon Chase</h1>
+        <div className="landing">      
             <Link to = '/home'>
-                <button>Ingresar</button>
+                <div><img src="http://vignette4.wikia.nocookie.net/nintendo/images/d/d3/Pokemon_AlphaSapphire_(Logo_-_NA).png/revision/latest?cb=20140507202614&path-prefix=en"/></div>
             </Link>
         </div>
     )

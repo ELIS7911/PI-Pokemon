@@ -86,7 +86,6 @@ export default Detail; */
 
 
     <div>
-       
        <div>
            <h1>Soy {myPokemon.name}</h1>
            <img src={myPokemon.img} alt="imagen no encontrada" width='300px' height='400px'/>

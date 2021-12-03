@@ -1,22 +1,116 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.landing {
-  padding: 15px;
-  color: #fff;
-  background: url("https://www.pixelstalk.net/wp-content/uploads/2016/02/Cool-Pokemon-Wallpapers-Free-download.jpg") no-repeat center center/cover;
-  height: 800px;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  /* LANDING PAGE */
+  
+  .landing {
+    height: 100vh;
+          background: url("https://images3.alphacoders.com/109/1091978.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      
+    /* padding: 15px;
+    color: #fff;
+    background: url("https://www.pixelstalk.net/wp-content/uploads/2016/02/Cool-Pokemon-Wallpapers-Free-download.jpg") no-repeat center center/cover;
+    height: 800px; */
+    
+  }
+  .landing img {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    margin: 6vh 0 0 8vh;
+  }
+  .landing img:hover {
+      transform: scale(1.1);
+      transition: 1s ease-in-out;
+  }
+
+  /* HOME */
+ /* global */
+
+  a{
+      color:#f4f8f6;
+  }
+  h1{
+      color: #f4f8f6;
+  }
+
+  .home {
+    background: url("https://img.wallpapersafari.com/desktop/1920/1080/31/83/iaoKdU.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;     
+  }
+
+ /* nav */
+
+ .nav {
+   
+ }
+  
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 10px 80px 50px 80px;
+    grid-gap: 30px 30px;
+    justify-content: center;
+  }
+
+  /* CARD */
+
+  .contextCard{
+    background-image: linear-gradient(0deg, #fac86c 32%, transparent 55%);
+    opacity: 90%;
+    display: flex;
+		padding: 20px 10px;
+		border-radius: 10px;
+		justify-content: space-around;
+		align-items: center;
+		height: 300px;
+		position: relative;
+		max-width: 250px;
+  }
+  .contextCard:hover {
+    transform: scale(1.05);
+    opacity: 100%;
+    transition: 0.5s ease-in-out;
+    color: rgb(4, 99, 136);
+}
+  .contextCard img {
+      width: 205px;
+      height: 205px;
+      justify-content: space-around;
+	  align-items: top;
+  }
+
+  .contextCard h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    margin: 10px 0 5px 0;
+    text-transform: capitalize;
 
 }
+
+.link {
+    text-decoration: none;
+    color: rgb(2, 36, 49);
+}
+        
+		
+		

@@ -57,7 +57,8 @@ export default function Home() {
     }
 
   return (
-    <div>
+    <div className= "home">
+      <div className= "nav">
       <Link to="/pokemon">Crear Pokemon</Link>
       <h1>POKEPAGE</h1>
       <button
@@ -109,20 +110,25 @@ export default function Home() {
                 paginate={paginate}
                 />
                 <SearchBar/>
+      </div>
+                <div className="cardsContainer">
         {currentPokemons?.map((el) => {
           return (
             <fragment>
-              <Link to={"/pokemons/" + el.id}>
+              <Link className="link" to={"/pokemons/" + el.id}>
+                
                 <Card
                   name={el.name}
                   types={el.types}
                   img={el.img}
                   key={el.id}
                 />
+                
               </Link>
             </fragment>
           );
         })}
+        </div>
       </div>
     </div>
   );
