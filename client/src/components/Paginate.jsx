@@ -6,11 +6,11 @@ export default function Paginate({pokemonsPerPage, allPokemons, paginate}){
         pageNumbers.push(i+1);
     }
     return(
-        <nav>
-            <ul className="paginate">
+        <nav  className="paginate">
+            <ul>
                 { pageNumbers &&
                 pageNumbers.map(number => (
-                    <li className="number" key={number}>
+                    <li key={number}>
                     <a onClick={() => paginate(number)}>{number}</a>
                     </li>
                 ))}

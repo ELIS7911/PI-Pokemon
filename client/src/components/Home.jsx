@@ -58,17 +58,23 @@ export default function Home() {
 
   return (
     <div className= "home">
-      <div className= "nav">
-      <Link to="/pokemon">Crear Pokemon</Link>
+      <div className="navbar">
       <h1>POKEPAGE</h1>
-      <button
+      <SearchBar/>
+      <Link to="/pokemon">Crear Pokemon</Link>
+      </div>
+      
+      <div>
+        <div className="selection">
+        <button
         onClick={(e) => {
           handleClick(e);
         }}
       >
         Volver a cargar todos los pokemons
       </button>
-      <div>
+      
+
         <select onChange={(e) => handleFilterType(e)}>
         <option value="All">Todos</option>
                     <option value="normal">Normal</option>
@@ -104,13 +110,13 @@ export default function Home() {
           <option value="Asc">Ascendente</option>
           <option value="Desc">Descendente</option>
         </select>
+        </div>
         <Paginate
                 pokemonsPerPage={pokemonsPerPage}
                 allPokemons={allPokemons.length}
                 paginate={paginate}
                 />
-                <SearchBar/>
-      </div>
+                
                 <div className="cardsContainer">
         {currentPokemons?.map((el) => {
           return (
@@ -119,7 +125,7 @@ export default function Home() {
                 
                 <Card
                   name={el.name}
-                  types={el.types}
+                  types={el.types} 
                   img={el.img}
                   key={el.id}
                 />

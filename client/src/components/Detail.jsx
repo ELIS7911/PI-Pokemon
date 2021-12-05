@@ -84,18 +84,19 @@ return (
 
 export default Detail; */
 
-
-    <div>
-       <div>
+<div className="detailContainer">
+    <div className = "pokeContainer">
            <h1>Soy {myPokemon.name}</h1>
            <img src={myPokemon.img} alt="imagen no encontrada" width='300px' height='400px'/>
-           <h2>HP:{myPokemon.hp}</h2>
-           <h2>Attack:{myPokemon.attack}</h2>
-           <h2>Defense:{myPokemon.defense}</h2>
-           <h2>Speed:{myPokemon.speed}</h2>
-           <h2>Types:{myPokemon.types + ' '}</h2>
-           <h2>Weight:{myPokemon.weight}</h2>   
-           <h2>Height:{myPokemon.height}</h2> 
+		   <div className="pokeInfo">
+		   <h2>Vida: {myPokemon.hp}</h2>
+           <h2>Ataque: {myPokemon.attack}</h2>
+           <h2>Defensa: {myPokemon.defense}</h2>
+           <h2>Velocidad: {myPokemon.speed}</h2>
+           <h2>Tipos: {myPokemon.types + " "}</h2>
+           <h2>Peso: {myPokemon.weight}</h2>   
+           <h2>Altura: {myPokemon.height}</h2>
+		   </div> 
        </div> 
 	   <Link to='/home'>
 		   <button>Volver</button>
@@ -103,5 +104,6 @@ export default Detail; */
        
        
     </div>
+	
 )
     } 
