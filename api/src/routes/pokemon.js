@@ -8,12 +8,13 @@ const {
 } = require('../controllers/pokemon');
 
 router.get('/', async (req, res) => {
-	const { name } = req.query;
+	const {name} = req.query;
 	const poke = await getAllPokemons(name);
 	poke
 		? res.status(200).send(poke)
 		: res.status(404).send(['No existe un pokemon con el nombre: ' + name]);
 });
+
 
 router.get('/:id', async (req, res) => {
 	const { id } = req.params;

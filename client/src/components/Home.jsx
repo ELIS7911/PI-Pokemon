@@ -5,11 +5,12 @@ import { useState, useEffect } from "react";
 //importo los hooks de react-redux
 import { useDispatch, useSelector } from "react-redux";
 //importo las actions que voy a usar en este componente
-import { getPokemons, filterPokeType, filterCreated, orderByName } from "../actions";
+import { getPokemons, filterPokeType, filterCreated, orderBy } from "../actions";
 //importo los componentes que voy a usar
 import Card from "./Card";
 import Paginate from './Paginate';
 import SearchBar from './SearchBar';
+import logo from '../img/logo.png';
 
 //componente
 export default function Home() {
@@ -51,7 +52,7 @@ export default function Home() {
 
   function handleSort(e){
         e.preventDefault();
-        dispatch (orderByName(e.target.value))
+        dispatch (orderBy(e.target.value))
         setCurrentPage(1);
         setOrder(`Ordenado ${e.target.value}`)
     }
@@ -59,9 +60,9 @@ export default function Home() {
   return (
     <div className= "home">
       <div className="navbar">
-      <h1>POKEPAGE</h1>
+      <div><img src={logo}/></div>
       <SearchBar/>
-      <Link to="/pokemon">Crear Pokemon</Link>
+      <Link to="/pokemon"><button>Crear</button></Link>
       </div>
       
       <div>
@@ -71,7 +72,7 @@ export default function Home() {
           handleClick(e);
         }}
       >
-        Volver a cargar todos los pokemons
+        Recargar Pokemons
       </button>
       
 
@@ -107,8 +108,10 @@ export default function Home() {
 					<option value='string'>Created</option>
         </select>
         <select onChange={e => handleSort(e)}>
-          <option value="Asc">Ascendente</option>
-          <option value="Desc">Descendente</option>
+          <option value="Asc">A-Z</option>
+          <option value="Desc">Z-A</option>
+          <option value='Att-Asc'>Ataque +</option>
+					<option value='Att-Des'>Ataque -</option>
         </select>
         </div>
         <Paginate
@@ -122,14 +125,12 @@ export default function Home() {
           return (
             <fragment>
               <Link className="link" to={"/pokemons/" + el.id}>
-                
                 <Card
                   name={el.name}
                   types={el.types} 
                   img={el.img}
                   key={el.id}
                 />
-                
               </Link>
             </fragment>
           );

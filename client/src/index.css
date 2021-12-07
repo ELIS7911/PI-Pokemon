@@ -3,6 +3,7 @@ body {
     font-family: 'Bahnschrift';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 100vw;
   }
   
   code {
@@ -30,8 +31,8 @@ body {
   .landing img {
     display: flex;
     flex-direction: column;
-    width: 35vw;
-    margin: 6vh 0 0 8vh;
+    width: 45vw;
+    margin: 30px 0 0 20px;
   }
   .landing img:hover {
       transform: scale(1.1);
@@ -56,14 +57,28 @@ body {
   }
 
   .navbar {
-    
     display: flex;
     justify-content: space-around;
 		align-items: center;
-    background-color: #fac86c;
+    background: #003366;
     height: 5rem;
     width: 100vw;
   }
+  .navbar img{
+    width:150px;
+  }
+
+  .navbar input{
+    font-size: 15px;
+    height: 32px;
+    padding: 0px 20px;
+    border-radius: 16px;
+    background: #f5f4f3;
+    border: 1px solid #5a5959;
+    width: 190px;
+
+  }
+
   .selection {
     display: flex;
     justify-content: center;
@@ -71,9 +86,6 @@ body {
     gap: 20px;
     width: 100vw;
     height: 4em;
-		padding-left: 15px;
-		border-radius: 5px;
-		border: 1px solid #7e7e7e;
 		background: #1e2125;
 		color: #e2dddd;
 		font-size: 16px;
@@ -82,12 +94,37 @@ body {
 		text-transform: capitalize;
   }
   
-  .selection select{
+button{
+  background-color: #3366cc;
+    border: none;
+    padding: 7px 5px;
+    border-radius: 12px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: white;
+    width: 100px;
+}
+
+button:hover {
+  background-color: #1855cf;
+}
+
+  .selection button{
+    width: 240px;
+    
+    background-color: #474949;
+  }
+
+  .selection button:hover {
+    background-color: #3e6dca;
+  }
+  
+  .selection select {
     font-size: 15px;
     height: 32px;
     padding: 0px 20px;
     border-radius: 16px;
-    margin: 20px 0 0 0;
     background: #f5f4f3;
     border: 1px solid #5a5959;
     width: 190px;
@@ -106,6 +143,10 @@ body {
 		height: 8px;
     width: 8px;
 		cursor: pointer;
+  }
+
+  .paginate a:hover {
+    background-color: #3e6dca;
   }
   .paginate a{
     list-style: none;
@@ -129,7 +170,7 @@ body {
   }
 
   .contextCard{
-    background-image: linear-gradient(0deg, #fac86c 32%, transparent 55%);
+    background-image: linear-gradient(0deg, #dfdbdbea 32%, transparent 55%);
     opacity: 90%;
     display: flex;
 		padding: 20px 10px;
@@ -161,15 +202,28 @@ body {
     text-transform: uppercase;
 }
 
+.contextCard h5{
+  font-size: 18px;
+  justify-content: center;
+  padding: 0px;
+  margin: 5px;
+  background-color: #fff;
+  border-radius: 10px;
+  
+}
+
 .link {
     text-decoration: none;
     color: rgb(2, 36, 49);
 }
+
+
+
         
 /* POKEMON CREATE */
   .createContainer{
-  background-image: url('https://img.wallpapersafari.com/desktop/1920/1080/31/83/iaoKdU.jpg');
-	background-position: center;
+  background-image: url('http://2.bp.blogspot.com/-GcMuYFHu-fA/U5zSUTYqaRI/AAAAAAAABo4/j6Vts9aLPkI/s1600/Pokemon+Wallpaper.jpg');
+	background-position: bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
@@ -179,38 +233,47 @@ body {
 } 
 
 .createContainer h1 {
-    font-family: 'Bahnschrift';
-    font-weight: 800;
+    font-family: 'Bahnschrift';  
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin: 20px 0 0px;
+    
   }
 
 .formContainer{
+  display: flex;
+  flex-direction: column;
   font-family: 'Bahnschrift';
   box-shadow: 8px 13px 26px 9px rgba(0, 0, 0, 0.618);
-	background-color: #ffffffdc;
+	background-color: #ffffff59;
 	height: 600px;
-	width: 500px;
+	width: 900px;
 	border-radius: 30px;
-	margin: 200px;
-	padding: 15px;
 	color: #2e2e2e;
-	display: flex;
-	flex-direction: column;
 	}
+
   
+  .campos{
+    color:rgb(2, 36, 49);
+    font-size: 18px;
+    font-weight: bold;
+    height:300px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
   .btnCreate{
-    background-color: #1170ec;
+    
+    background-color: #3d3e3f;
+    font-family: 'Bahnschrift';
     border: none;
-    margin-top: 15px;
     padding: 10px 25px;
     border-radius: 10px;
     font-size: 20px;
     letter-spacing: 1px;
     cursor: pointer;
     color: white;
-    width: 260px;
+    width: 230px;
   }
 
   .btnCreate:hover {
@@ -227,6 +290,15 @@ body {
 	border: 1px solid #5a5959;
 	width: 150px;
   }
+  .formContainer button{
+    margin-top: 30px;
+    font-family: 'Bahnschrift';
+    background-color: #3d3e3f;
+  }
+
+  .formContainer button:hover {
+    background-color: #1ca0ec;
+  }
   
   .formContainer select{
     font-size: 15px;
@@ -237,11 +309,32 @@ body {
     background: #f5f4f3;
     border: 1px solid #5a5959;
     width: 190px;
-    
     }
+    
     label{
       display: inline-block;
       width: 80px;
+    }
+
+    .containerTipos{
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      background-color: blue;
+      width: 500px;
+      height: 300px;
+    }
+
+    .tipos p {
+      justify-content: space-around;
+      align-items: center;
+      font-size: 15px;
+      height: 32px;
+      padding: 0px 20px;
+      border-radius: 16px;
+      background: #f5f4f3;
+      border: 1px solid #5a5959;
+      width: 120px;
     }
 
  /*  DETAIL */
@@ -257,12 +350,12 @@ body {
  }
  .pokeContainer{
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 3fr;
-  box-shadow: 8px 13px 26px 9px rgba(0, 0, 0, 0.75);
-  background: #dfdbdbea;
-  width: 900px;
-  height: 600px;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 8px 13px 26px 9px rgba(0, 0, 0, 0.618);
+  background-color: #ffffff59;
+  width: 700px;
+  height: 500px;
   border-radius: 30px;
   color: #2e2e2e;
   padding: 30px;
@@ -270,8 +363,8 @@ body {
  }
 
  .pokeContainer h1{
-   font-size: 40px;
-   grid-column: 1/3;
+   font-size: 35px;
+   grid-column: 1/2;
    grid-row: 1/2;
    text-transform: uppercase;
  }
@@ -282,8 +375,32 @@ body {
    justify-self: center;
  }
  .pokeInfo {
+  width: 230px;
+  background-color: #ffffff59;
+  border-radius: 15px;
+  justify-self: center;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  
+}
+.pokeInfo h2{
+  font-size: 18px;
+  border-radius: 16px;
+	background: #f5f4f3;
+	border: 1px solid #5a5959;
+  width: 180px;
+  position: relative;
+  padding: 5px;
+  margin: 20px;
+}
+
+.detail-btn button{
+  
   grid-column: 2/3;
   grid-row: 2/3;
+  font-family: 'Bahnschrift';
+  padding: 5px;
+  margin: 20px;
 }
 
  

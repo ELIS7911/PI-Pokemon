@@ -26,9 +26,10 @@ const initialState = {
           types: action.payload,
         };
   
-      case "ORDER_BY_NAME":
-        let sortedArray = action.payload === 'Asc'?
-        state.pokemons.sort(function (a, b){
+      case "ORDER_BY":
+        let sortedArray;
+         if (action.payload === 'Asc') {
+        sortedArray = state.pokemons.sort(function (a, b){
             if (a.name > b.name) {
                 return 1;
             }
@@ -36,8 +37,10 @@ const initialState = {
               return -1;
           }
           return 0;
-        }) : 
-        state.pokemons.sort(function (a, b){
+        })
+      }
+      if (action.payload === 'Desc') {
+        sortedArray = state.pokemons.sort(function (a, b){
             if (a.name > b.name) {
               return -1;
             }
@@ -46,6 +49,29 @@ const initialState = {
             }
             return 0;
           })
+        }
+        if (action.payload === 'Att-Asc') {
+          sortedArray = state.pokemons.sort(function (a, b) {
+            if (a.attack > b.attack) {
+              return -1;
+            }
+            if (a.attack < b.attack) {
+              return 1;
+            }
+            return 0;
+          });
+        }
+        if (action.payload === 'Att-Des') {
+          sortedArray = state.pokemons.sort(function (a, b) {
+            if (a.attack > b.attack) {
+              return 1;
+            }
+            if (a.attack < b.attack) {
+              return -1;
+            }
+            return 0;
+          });
+        }
           return {
               ...state,
               pokemons: sortedArray,

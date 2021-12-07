@@ -45,9 +45,9 @@ export function postPokemon(payload) {
   };
 }
 
-export function orderByName(payload) {
+export function orderBy(payload) {
   return {
-    type: "ORDER_BY_NAME",
+    type: "ORDER_BY",
     payload,
   };
 }

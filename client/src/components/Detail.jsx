@@ -96,13 +96,13 @@ export default Detail; */
            <h2>Tipos: {myPokemon.types + " "}</h2>
            <h2>Peso: {myPokemon.weight}</h2>   
            <h2>Altura: {myPokemon.height}</h2>
-		   </div> 
        </div> 
+	   <div className="detail-btn">
 	   <Link to='/home'>
 		   <button>Volver</button>
 	   </Link>
-       
-       
+	   </div>
+       </div>
     </div>
 	
 )
