@@ -11,11 +11,16 @@ import Card from "./Card";
 import Paginate from './Paginate';
 import SearchBar from './SearchBar';
 import logo from '../img/logo.png';
+import styled from 'styled-components';
+import bg from '../img/elementospoke.jpg';
+
+
 
 //componente
 export default function Home() {
   const dispatch = useDispatch();
   const allPokemons = useSelector((state) => state.pokemons);
+  const types = useSelector((state) => state.types);
   useEffect(() => {
     dispatch(getPokemons());
   }, [dispatch]);
@@ -57,16 +62,25 @@ export default function Home() {
         setOrder(`Ordenado ${e.target.value}`)
     }
 
+    const Home = styled.div`
+	  background: url("${bg}");
+	  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Bahnschrift';   
+	`;
+
   return (
-    <div className= "home">
+    <Home>
       <div className="navbar">
+
       <div><img src={logo}/></div>
       <SearchBar/>
       <Link to="/pokemon"><button>Crear</button></Link>
       </div>
-      
       <div>
         <div className="selection">
+
         <button
         onClick={(e) => {
           handleClick(e);
@@ -74,40 +88,26 @@ export default function Home() {
       >
         Recargar Pokemons
       </button>
-      
-
         <select onChange={(e) => handleFilterType(e)}>
-        <option value="All">Todos</option>
-                    <option value="normal">Normal</option>
-                    <option value="fighting">Fighting</option>
-                    <option value="bug">Bug</option>
-                    <option value="ghost">Ghost</option>
-                    <option value="flying">Flying</option>
-                    <option value="ground">Ground</option>
-                    <option value="poison">Poison</option>
-                    <option value="rock">Rock</option>
-                    <option value="steel">Steel</option>
-                    <option value="fire">Fire</option>
-                    <option value="water">Water</option>
-                    <option value="grass">Grass</option>
-                    <option value="electric">Electric</option>
-                    <option value="psychic">Psychic</option>
-                    <option value="ice">Ice</option>
-                    <option value="dragon">Dragon</option>
-                    <option value="dark">Dark</option>
-                    <option value="fairy">Fairy</option>
-                    <option value="shadow">Shadow</option>
-                    <option value="unknown">Unknown</option>
+        <option disabled selected>
+						Tipos
+					</option>
+          {types.map((type) => (
+              <option value={type.name}>{type.name}</option>
+            ))}
         </select>
         <select onChange={e => handleFilterCreated(e)}>
         <option disabled selected>
 						Creado/Existente
 					</option>
-					<option value='all'>All</option>
-					<option value='number'>Exist</option>
-					<option value='string'>Created</option>
+					<option value='all'>Todos</option>
+					<option value='number'>Existentes</option>
+					<option value='string'>Creados</option>
         </select>
         <select onChange={e => handleSort(e)}>
+        <option disabled selected>
+						Orden
+					</option>
           <option value="Asc">A-Z</option>
           <option value="Desc">Z-A</option>
           <option value='Att-Asc'>Ataque +</option>
@@ -121,6 +121,7 @@ export default function Home() {
                 />
                 
                 <div className="cardsContainer">
+
         {currentPokemons?.map((el) => {
           return (
             <fragment>
@@ -137,6 +138,6 @@ export default function Home() {
         })}
         </div>
       </div>
-    </div>
+    </Home>
   );
 }

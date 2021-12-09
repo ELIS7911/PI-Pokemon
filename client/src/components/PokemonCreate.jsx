@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { postPokemon, getTypes } from "../actions/index";
 import { useDispatch, useSelector } from "react-redux";
+import styles from './PokemonCreate.module.css'
 
 export default function PokemonCreate() {
   const dispatch = useDispatch();
@@ -85,17 +86,19 @@ export default function PokemonCreate() {
     dispatch(getTypes());
   }, []);
   return (
-    <div className="createContainer">
+    <div className={styles.createContainer}>
       
-      <div className="formContainer">
+      <div className={styles.formContainer}>
         <Link to="/home">
           <button type="button">Volver</button>
         </Link>
         
         <h1>Crea tu pokemon</h1>
         <form onSubmit={(e) => handleSubmit(e)}>
-          <div className='campos'>
-          <div className="create1">
+          <div className={styles.campos}>
+
+          <div className={styles.create1}>
+
           <div>
             <label>Nombre </label>
             <input
@@ -106,7 +109,8 @@ export default function PokemonCreate() {
             />
             {errors.name && <p>{errors.name}</p>}
           </div>
-          <div className="createInfo">
+          <div className={styles.createInfo}>
+
             <label>Vida </label>
             <input
               type="number"
@@ -135,7 +139,7 @@ export default function PokemonCreate() {
             />
           </div>
           </div>
-          <div className="create2">
+          <div className={styles.create2}>
           <div>
             <label>Velocidad </label>
             <input
@@ -171,18 +175,22 @@ export default function PokemonCreate() {
           </select>
           </div >
           </div>
-          <button className="btnCreate" type="submit">
+          <button className={styles.btnCreate} type="submit">
             Crear Pokemon
           </button>
         </form>
-        {input.types.map((el) => (
-          <div className="containerTipos">
-          <div className="tipos">
-            <p>{el.name}</p>
-            <button onClick={() => handleDelete(el)}>X</button>
-          </div>
-          </div>
-        ))}
+        {types.map((type) => {
+          if (input.types.includes(type.id)){
+            return (
+              
+          <div className={styles.tipos}>
+            <p>{type.name}</p>
+            <button onClick={() => handleDelete(type.id)}>X</button>
+          
+          </div>)
+          }
+          
+        })}
         
       </div>
     </div>

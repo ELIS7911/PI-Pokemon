@@ -1,0 +1,139 @@
+button {
+  font-family: "Bahnschrift";
+  background-color: #1ca0ec;
+  border: none;
+  padding: 7px 5px;
+  border-radius: 12px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: white;
+  width: 100px;
+}
+
+button:hover {
+  background-color: #1855cf;
+}
+
+.createContainer {
+  background-image: url("http://2.bp.blogspot.com/-GcMuYFHu-fA/U5zSUTYqaRI/AAAAAAAABo4/j6Vts9aLPkI/s1600/Pokemon+Wallpaper.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createContainer h1 {
+  font-family: "Bahnschrift";
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  font-family: "Bahnschrift";
+  box-shadow: 8px 13px 26px 9px rgba(0, 0, 0, 0.618);
+  background-color: #ffffff59;
+  height: 600px;
+  width: 900px;
+  border-radius: 30px;
+  color: #2e2e2e;
+}
+
+.campos {
+  color: rgb(2, 36, 49);
+  font-size: 18px;
+  font-weight: bold;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btnCreate {
+  background-color: #3d3e3f;
+  font-family: "Bahnschrift";
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: white;
+  width: 230px;
+}
+
+.btnCreate:hover {
+  background-color: #1ca0ec;
+}
+
+.formContainer input {
+  font-size: 15px;
+  height: 32px;
+  padding: 0px 20px;
+  border-radius: 16px;
+  margin: 20px 0 0 0;
+  background: #f5f4f3;
+  border: 1px solid #5a5959;
+  width: 150px;
+}
+
+.formContainer button {
+  margin-top: 30px;
+  font-family: "Bahnschrift";
+  background-color: #3d3e3f;
+}
+
+.formContainer button:hover {
+  background-color: #1ca0ec;
+}
+
+.formContainer select {
+  font-size: 15px;
+  height: 32px;
+  padding: 0px 20px;
+  border-radius: 16px;
+  margin: 20px 0 0 0;
+  background: #f5f4f3;
+  border: 1px solid #5a5959;
+  width: 190px;
+}
+
+label {
+  display: inline-block;
+  width: 80px;
+}
+
+.tipos{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.tipos p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  height: 32px;
+  border-radius: 16px;
+  background: #f5f4f3;
+  border: 1px solid #5a5959;
+  width: 120px;
+}
+
+.tipos button {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  margin: 0 0 0 5px;
+}

@@ -35,7 +35,7 @@ conn.sync({ force: true }).then(async () => {
 	);
 
 	Promise.all(types).then((resp) => {
-		console.log('Tipos Cargados...');
+		console.log('Carga correcta...');
 	});
 
 	server.listen(3001, () => {

@@ -1,11 +1,11 @@
 import React from 'react';
+import styles from './Card.module.css'
 
 export default function Card ({ name, img, types }) {
     
     return (
-        <div className="contextCard">
-            
-        <div className="card">
+        <div className={styles.contextCard}>          
+        <div>
             <img src={img} alt="Oops! Not found"/>
             <h3>{name}</h3>
             <h4>
@@ -14,7 +14,6 @@ export default function Card ({ name, img, types }) {
 						return <h5>{type}</h5>;
 					})}
 				</h4>
-            
         </div>
         </div>
     );

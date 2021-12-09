@@ -10,9 +10,14 @@ body {
     font-family: 'Bahnschrift';
   }
 
+  .link {
+    text-decoration: none;
+    color: rgb(2, 36, 49);
+  }
+
   /* LANDING PAGE */
   
-  .landing {
+  /* .landing {
     height: 100vh;
           background: url("https://images3.alphacoders.com/109/1091978.jpg");
           background-position: center;
@@ -20,14 +25,14 @@ body {
           background-size: cover;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-between; */
       
     /* padding: 15px;
     color: #fff;
     background: url("https://www.pixelstalk.net/wp-content/uploads/2016/02/Cool-Pokemon-Wallpapers-Free-download.jpg") no-repeat center center/cover;
     height: 800px; */
     
-  }
+  /* }
   .landing img {
     display: flex;
     flex-direction: column;
@@ -38,7 +43,7 @@ body {
       transform: scale(1.1);
       transition: 1s ease-in-out;
   }
-
+ */
   /* HOME */
 
   a{
@@ -49,7 +54,7 @@ body {
   }
 
   .home {
-    background: url("https://img.wallpapersafari.com/desktop/1920/1080/31/83/iaoKdU.jpg");
+    background: url("https://cdn.wallpapersafari.com/4/38/mOfcQ2.png");
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
@@ -57,10 +62,11 @@ body {
   }
 
   .navbar {
+    font-family: 'Bahnschrift';
     display: flex;
     justify-content: space-around;
 		align-items: center;
-    background: #003366;
+    background: #ffd33e;
     height: 5rem;
     width: 100vw;
   }
@@ -76,10 +82,14 @@ body {
     background: #f5f4f3;
     border: 1px solid #5a5959;
     width: 190px;
-
+  }
+  .navbar button{
+    
+    margin-left: 5px;
   }
 
   .selection {
+    font-family: 'Bahnschrift';
     display: flex;
     justify-content: center;
 		align-items: center;
@@ -94,8 +104,10 @@ body {
 		text-transform: capitalize;
   }
   
-button{
-  background-color: #3366cc;
+button {
+  font-family: 'Bahnschrift';
+  background-color: #1ca0ec;
+  
     border: none;
     padding: 7px 5px;
     border-radius: 12px;
@@ -117,7 +129,7 @@ button:hover {
   }
 
   .selection button:hover {
-    background-color: #3e6dca;
+    background-color: #1855cf;
   }
   
   .selection select {
@@ -130,7 +142,15 @@ button:hover {
     width: 190px;
   }
 
-  .paginate ul{
+  .cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 10px 80px 50px 80px;
+    grid-gap: 30px 30px;
+    justify-content: center;
+  }
+
+  /* .paginate ul{
     display: flex;
 		justify-content: center;
 		text-decoration: none;
@@ -139,6 +159,7 @@ button:hover {
 
   .paginate li{
     list-style: none;
+    justify-content: center;
     margin: 20px;
 		height: 8px;
     width: 8px;
@@ -146,16 +167,17 @@ button:hover {
   }
 
   .paginate a:hover {
-    background-color: #3e6dca;
+    background-color: #1855cf;
   }
   .paginate a{
+    justify-content: center;
     list-style: none;
 		padding: 7px 15px 8px 15px;
     border-radius: 20px;
 		cursor: pointer;
 		background-color: #474949;
 		
-  }
+  } */
   
   
 
@@ -163,14 +185,15 @@ button:hover {
   
   .cardsContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     padding: 10px 80px 50px 80px;
     grid-gap: 30px 30px;
     justify-content: center;
   }
 
-  .contextCard{
-    background-image: linear-gradient(0deg, #dfdbdbea 32%, transparent 55%);
+  /* .contextCard{
+    background-image: linear-gradient(0deg, #ffd33e 32%, transparent 55%);
+    box-shadow: 8px 13px 26px 9px rgba(0, 0, 0, 0.618);
     opacity: 90%;
     display: flex;
 		padding: 20px 10px;
@@ -210,18 +233,16 @@ button:hover {
   background-color: #fff;
   border-radius: 10px;
   
-}
+} */
 
-.link {
-    text-decoration: none;
-    color: rgb(2, 36, 49);
-}
+
 
 
 
         
 /* POKEMON CREATE */
-  .createContainer{
+
+  /* .createContainer{
   background-image: url('http://2.bp.blogspot.com/-GcMuYFHu-fA/U5zSUTYqaRI/AAAAAAAABo4/j6Vts9aLPkI/s1600/Pokemon+Wallpaper.jpg');
 	background-position: bottom;
 	background-repeat: no-repeat;
@@ -263,7 +284,6 @@ button:hover {
     align-items: center;
   }
   .btnCreate{
-    
     background-color: #3d3e3f;
     font-family: 'Bahnschrift';
     border: none;
@@ -335,20 +355,11 @@ button:hover {
       background: #f5f4f3;
       border: 1px solid #5a5959;
       width: 120px;
-    }
+    } */
 
  /*  DETAIL */
 
- .detailContainer{
-  background-image: url('https://img.wallpapersafari.com/desktop/1920/1080/31/83/iaoKdU.jpg');
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  font-family: 'Bahnschrift';
-  justify-content: center;
-  align-items: center;
- }
- .pokeContainer{
+ /* .pokeContainer{
   display: grid;
   grid-template-rows: 1fr 3fr;
   grid-template-columns: 1fr 1fr;
@@ -363,6 +374,7 @@ button:hover {
  }
 
  .pokeContainer h1{
+   
    font-size: 35px;
    grid-column: 1/2;
    grid-row: 1/2;
@@ -384,10 +396,10 @@ button:hover {
   
 }
 .pokeInfo h2{
-  font-size: 18px;
+  font-size: 17px;
   border-radius: 16px;
 	background: #f5f4f3;
-	border: 1px solid #5a5959;
+	border: 1px solid #c4c2c2;
   width: 180px;
   position: relative;
   padding: 5px;
@@ -395,13 +407,12 @@ button:hover {
 }
 
 .detail-btn button{
-  
   grid-column: 2/3;
   grid-row: 2/3;
   font-family: 'Bahnschrift';
   padding: 5px;
   margin: 20px;
-}
+} */
 
  
 

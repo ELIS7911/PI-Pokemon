@@ -1,0 +1,28 @@
+.paginate ul {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Bahnschrift";
+}
+
+.paginate li {
+  list-style: none;
+  justify-content: center;
+  margin: 20px;
+  height: 8px;
+  width: 8px;
+  cursor: pointer;
+}
+
+.paginate a:hover {
+  background-color: #1855cf;
+}
+
+.paginate a {
+  justify-content: center;
+  list-style: none;
+  padding: 7px 15px 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #474949;
+}

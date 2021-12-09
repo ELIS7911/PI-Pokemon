@@ -1,0 +1,21 @@
+.landing {
+  height: 100vh;
+  background: url("https://images3.alphacoders.com/109/1091978.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.landing img {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+  margin: 30px 0 0 20px;
+}
+.landing img:hover {
+  transform: scale(1.1);
+  transition: 1s ease-in-out;
+}

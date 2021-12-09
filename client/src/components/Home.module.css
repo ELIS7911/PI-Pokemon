@@ -1,0 +1,97 @@
+
+a{
+    color:#f4f8f6;
+}
+
+h1{
+    color: #f4f8f6;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 10px 80px 50px 80px;
+  grid-gap: 30px 30px;
+  justify-content: center;
+}
+
+.navbar {
+  font-family: "Bahnschrift";
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffd33e;
+  height: 5rem;
+  width: 100vw;
+}
+
+.navbar img {
+  width: 150px;
+}
+
+.navbar input {
+  font-size: 15px;
+  height: 32px;
+  padding: 0px 20px;
+  border-radius: 16px;
+  background: #f5f4f3;
+  border: 1px solid #5a5959;
+  width: 190px;
+}
+
+.navbar button {
+  margin-left: 5px;
+}
+
+.selection {
+  font-family: "Bahnschrift";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100vw;
+  height: 4em;
+  background: #1e2125;
+  color: #e2dddd;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+button {
+  font-family: "Bahnschrift";
+  background-color: #1ca0ec;
+  border: none;
+  padding: 7px 5px;
+  border-radius: 12px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: white;
+  width: 100px;
+}
+
+button:hover {
+  background-color: #1855cf;
+}
+
+.selection button {
+  width: 240px;
+  background-color: #474949;
+}
+
+.selection button:hover {
+  background-color: #1855cf;
+}
+
+.selection select {
+  font-size: 15px;
+  height: 32px;
+  padding: 0px 20px;
+  border-radius: 16px;
+  background: #f5f4f3;
+  border: 1px solid #5a5959;
+  width: 190px;
+}
+
