@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 //importo los hooks de react-redux
 import { useDispatch, useSelector } from "react-redux";
 //importo las actions que voy a usar en este componente
-import { getPokemons, filterPokeType, filterCreated, orderBy } from "../actions";
+import { getPokemons, filterPokeType, filterCreated, orderBy, getTypes } from "../actions";
 //importo los componentes que voy a usar
 import Card from "./Card";
 import Paginate from './Paginate';
@@ -24,6 +24,10 @@ export default function Home() {
   useEffect(() => {
     dispatch(getPokemons());
   }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getTypes());
+  }, []);
   console.log(allPokemons);
 
   //Paginado

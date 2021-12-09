@@ -50,7 +50,7 @@ let pokeFilterByName = async (allPoke, name) => {
 		return poke.name.toLowerCase() === name.toLowerCase();
 	});
 
-	 if (!poke.length) {
+	if (!poke.length) {
 		let info = await axios.get('https://pokeapi.co/api/v2/pokemon/' + name);
 		info = info.data;
 		return (poke = [
@@ -67,7 +67,7 @@ let pokeFilterByName = async (allPoke, name) => {
 				height: info.height,
 			},
 		]);
-	} 
+	}
 	return poke;
 };
 
